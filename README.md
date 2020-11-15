@@ -1,10 +1,7 @@
-# Planta_IOT_Arduino
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/uai.png?raw=true" width="250px" align="right" />
+
+# Planta IOT Arduino 
 Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 2020
-
-<img src="https://github.com/damiancipolat/arduino101/blob/master/doc/logo.png?raw=true" width="150px" align="right" />
-
-# Arduino 101 🚀:alien::robot:
-Basic examples and script to test arduino things.
 
 ### Materiales utilizados:
 - Arduino UNO.
