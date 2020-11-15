@@ -29,4 +29,4 @@ Lista de fotos, haga click en el link.
 ### Maquina de estados:
 En el siguiente diagrama se detalla la maquina de estados creada para este proyecto.
 
-<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/diagram.png?raw=true" width="650px" align="center" />
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/diagram.png?raw=true" width="750px" align="center" />
