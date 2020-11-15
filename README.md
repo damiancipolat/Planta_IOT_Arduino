@@ -1,9 +1,8 @@
 <img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/uai.png?raw=true" width="250px" align="right" />
 
 # :herb: :shamrock:	 Planta IOT Arduino :ear_of_rice: :seedling: 
-Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 2020
+Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 2020.
 
-## Propuesta:
 El objetivo del proyecto que presentamos es crear un dispositivo electronico que atravez del uso de sensores pueda indicarnos el estado de la calidad de la tierra de una maceta
 y comunicarlo atravez de luces y un display. Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos informa las siguientes situaciones:
 
