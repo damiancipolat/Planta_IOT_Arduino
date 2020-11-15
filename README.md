@@ -35,7 +35,6 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
 
-#### En proceso de armado:
 - [En armado 1](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_1.jpg?raw=true)
 - [En armado 2](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_2.jpg?raw=true)
 - [En armado 3](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_3.jpg?raw=true)
