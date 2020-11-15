@@ -1,6 +1,6 @@
 <img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/uai.png?raw=true" width="250px" align="right" />
 
-# Planta IOT Arduino 
+# Planta IOT Arduino :ear_of_rice: :seedling: :herb: 
 Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 2020
 
 ## Propuesta:
