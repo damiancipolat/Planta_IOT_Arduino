@@ -164,7 +164,7 @@ void draw_temperature_box(int temp)
 }
 
 //DIBUJA LA PANTALLA DE HUMEDAD
-void draw_humidity_box(int temp)
+void draw_humidity_box(float value)
 {
   clear();
 
@@ -184,8 +184,8 @@ void draw_humidity_box(int temp)
   cursor(25,35);
 
   //Temperatura
-  font_size(3);  
-  draw_text((String)temp+" %");
+  font_size(3);
+  draw_text((String)value+" %");
   display.display();
 }
 

@@ -9,7 +9,7 @@ void draw_line(int x0,int y0, int x1, int y1);
 void cursor(int x,int y);
 void clear();
 void draw_temperature_box(int temp);
-void draw_humidity_box(int temp);
+void draw_humidity_box(float value);
 void draw_welcome();
 void draw_warning();
 void draw_text_box(String text);

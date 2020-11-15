@@ -17,28 +17,53 @@ void setup(){
 
 //Alarm condition.
 bool isAlarm(){  
-  return (temperature>20);
+  return (isTemperatureAlarm()||isHumidityAlarm()||waterRequired());
 }
 
 //Control flow.
-void control_values(){
+String control_values(){
   if (isAlarm())
     return "A";
   else
     return "W";
 }
 
+//Temperatura alarm.
+bool isTemperatureAlarm(){
+  return (temperature>=30);
+}
+
+bool isHumidityAlarm(){
+  return (humidity>0&&humidity<200);
+}
+
+bool waterRequired(){
+  return (humidity>800);
+}
+
 //Alarm state.
 String alarm(){
 
   //Check temperature excess.
-  if (temperature>20)
+  if (isTemperatureAlarm())
     return "ET";
 
   //Check humidity excess.
-  if (humidity>0&&humidity<200)
-    return "EW"; 
+  if (isHumidityAlarm())
+    return "EW";
 
+  //Check watering plant.
+  if (waterRequired())
+    return "WP";    
+
+}
+
+//Read the sensor values.
+void read_sensor_values(){
+  temperature = getTemperature();
+  Serial.println("Sensor TEMPERATURE------->"+(String)temperature);    
+  humidity = getHumidity();
+  Serial.println("Sensor HUMIDITY------->"+(String)humidity);  
 }
 
 void loop(){
@@ -46,77 +71,73 @@ void loop(){
   //Welcome state.
   if (state=="W"){
     draw_welcome();
-    delay(2000);
+    delay(500);
     state="T";
   }
 
   //Temperature scan
   if (state=="T"){
-    temperature = getTemperature();
-    draw_temperature_box(temperature);      
+    read_sensor_values();
+    draw_temperature_box(temperature);    
     led_standby(LED_1);
-    delay(1000);
+    delay(250);
     state="H";
   }
 
   //Humidity scan
   if (state=="H"){
-    humidity = getHumidity();
+    read_sensor_values();
     draw_humidity_box(humidity);      
     led_standby(LED_1);
-    delay(1000);    
+    delay(250);    
     state="C";
   }
 
   //Value control.
   if (state=="C"){
+    //Read values.
+    read_sensor_values();
+    //Analize conditions.
     state = control_values();
   }
 
   //Alarm state.
   if (state=="A"){
+    //Show warning.
+    draw_warning();
+    delay(500);
     state = alarm();
   }
 
   //WATER excess.
   if (state=="EW"){
-    //Show warning.
-    draw_warning();
-    delay(1000);
-
     //Show message.
     draw_alarm("Exceso","agua!");
-    delay(1000);
+    delay(1500);
     state="R";
   }
   
   //TEMPERATURE excess.
   if (state=="ET"){
-    //Show warning.
-    draw_warning();
-    delay(1000);
-
+    //Blink led.
+    led_alarm(LED_1);    
     //Show message.
     draw_alarm("Exceso","temp.!");
-    delay(1000);
-    state="R";    
+    delay(1500);
+    state="R";
   }
 
   //WATER required!
   if (state=="WP"){
-    //Show warning.
-    draw_warning();
-    delay(1000);
-
     //Show message.
     draw_alarm("Regar","planta");
-    delay(1000);
+    delay(1500);
     state="R";    
   }
 
   //Return state.
   if (state=="R"){
-    state="W";
+    state="C";
   }
 
 }
