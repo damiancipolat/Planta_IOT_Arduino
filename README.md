@@ -15,12 +15,16 @@ Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 20
 
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
+
+#### Estado final.
 - [Estado final](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/final.jpeg?raw=true)
-- [En armado 1](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_1.jpeg?raw=true)
-- [En armado 2](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_2.jpeg?raw=true)
-- [En armado 3](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_3.jpeg?raw=true)
-- [En armado 4](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_4.jpeg?raw=true)
-- [En armado 5](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_5.jpeg?raw=true)
+
+#### En proceso de armado.
+- [En armado 1](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_1.jpg?raw=true)
+- [En armado 2](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_2.jpg?raw=true)
+- [En armado 3](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_3.jpg?raw=true)
+- [En armado 4](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_4.jpg?raw=true)
+- [En armado 5](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_5.jpg?raw=true)
 
 ### Maquina de estados:
 En el siguiente diagrama se detalla la maquina de estados creada para este proyecto.
