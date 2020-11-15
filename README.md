@@ -12,7 +12,7 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 - Exceso de agua.
 - Regar la planta.
 
-<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/muestra.jpeg?raw=true" width="250px" align="center" />
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/muestra.jpeg?raw=true" width="500px" align="center" />
 
 ### Materiales utilizados:
 - Arduino UNO.
