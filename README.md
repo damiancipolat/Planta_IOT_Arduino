@@ -13,6 +13,14 @@ Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 20
 - Cables.
 - 6 seperadores de plaqueta.
 
+### Librerias:
+- Adafruit_GFX
+- Adafruit_SSD1306
+- OneWire
+- DallasTemperature
+
+**TODO**: cambiar arduino uno por NODEMCU para poder conectar a internet.
+
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
 
