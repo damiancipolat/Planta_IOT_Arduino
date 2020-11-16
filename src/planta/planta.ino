@@ -113,6 +113,8 @@ void loop(){
   if (state=="EW"){
     //Show message.
     draw_alarm("Exceso","agua!");
+    delay(500);
+    draw_humidity_box(humidity);
     delay(1500);
     state="R";
   }
@@ -123,6 +125,8 @@ void loop(){
     led_alarm(LED_1);    
     //Show message.
     draw_alarm("Exceso","temp.!");
+    delay(500);
+    draw_temperature_box(temperature);
     delay(1500);
     state="R";
   }
@@ -131,6 +135,8 @@ void loop(){
   if (state=="WP"){
     //Show message.
     draw_alarm("Regar","planta");
+    delay(500);
+    draw_humidity_box(humidity);    
     delay(1500);
     state="R";    
   }
