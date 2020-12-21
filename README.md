@@ -5,7 +5,7 @@ Repositorio creado para la materia, paradigmas de robotica de UAI sede centro 20
 
 ### Propuesta:
 El objetivo del proyecto que presentamos es crear un dispositivo electronico que atravez del uso de sensores pueda indicarnos el estado de la calidad de la tierra de una maceta
-y comunicarlo atravez de luces y un display.
+y comunicarlo atravez de luces y un display enviando estos dos valores a un dashboard de **Adafruit.io**.
 
 Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos informa las siguientes situaciones:
 - Exceso de temperatura, **temperatura > 20°c**.
@@ -15,7 +15,7 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 <img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/muestra.jpeg?raw=true" width="500px" align="center" />
 
 ### Materiales utilizados:
-- Arduino UNO.
+- NODEMCU.
 - Sensor de humedad de tierra.
 - Sensor digital de temperatura Ds18b20.
 - Display 0.96 OLED 128x64.
@@ -30,7 +30,8 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 - OneWire
 - DallasTemperature
 
-**TODO**: cambiar arduino uno por NODEMCU para poder conectar a internet.
+### DASHBOARD
+https://io.adafruit.com/damcipolat/dashboards/tp-final
 
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
