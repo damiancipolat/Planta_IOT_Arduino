@@ -35,6 +35,8 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 ### DASHBOARD
 https://io.adafruit.com/damcipolat/dashboards/tp-final
 
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/dashboard.png?raw=true" width="500px" align="center" />
+
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
 
