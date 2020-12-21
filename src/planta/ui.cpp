@@ -81,6 +81,7 @@ void display_start()
 {
   Wire.begin(2,0);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  
+  display.clearDisplay();
 }
 
 //Draw a circle.
@@ -207,6 +208,72 @@ void draw_welcome()
   draw_text("PLANTA");
   cursor(35,35);  
   draw_text("IOT");  
+  display.display();  
+}
+
+//Dibuja una espera de conexion.
+void draw_connection()
+{
+  clear();
+
+  //Dibujo borde.
+  draw_rectangle(0, 0,128 , 64, false);
+
+  //Fuente y texto.
+  font_size(3);
+  display.setTextColor(WHITE);
+  cursor(10,10);
+
+  //Titulo
+  draw_text("Conex.");
+  cursor(35,35);  
+  draw_text("WIFI");
+  display.display();  
+}
+
+//Dibuja una espera de conexion.
+void draw_wait()
+{
+  clear();
+
+  //Dibujo borde.
+  draw_rectangle(0, 0,128 , 64, false);
+
+  //Fuente y texto.
+  font_size(2);
+  display.setTextColor(WHITE);
+  cursor(5,5);
+
+  //Titulo
+  draw_text("Esperando.");
+
+  //Regla.
+  draw_line(0,25,128,25);  
+  cursor(5,35);
+
+  //Temperatura
+  font_size(2);
+  draw_text("conexion");
+  display.display(); 
+}
+
+//Enviar values
+void draw_sending()
+{
+  clear();
+
+  //Dibujo borde.
+  draw_rectangle(0, 0,128 , 64, false);
+
+  //Fuente y texto.
+  font_size(2);
+  display.setTextColor(WHITE);
+  cursor(10,10);
+
+  //Titulo
+  draw_text("Sending");
+  cursor(35,35);  
+  draw_text("values...");
   display.display();  
 }
 

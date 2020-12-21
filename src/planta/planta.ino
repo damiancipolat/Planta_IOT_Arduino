@@ -1,3 +1,4 @@
+#include "config.h"
 #include "temp.h"
 #include "humidity.h"
 #include "ui.h"
@@ -8,13 +9,23 @@ int LED_YELLOW =16;
 String state;
 int temperature;
 int humidity;
+bool connected=false;
+
+//Create temperature feed - adafruit.io.
+AdafruitIO_Feed *humidity_feed = io.feed("iot_humidity");
+
+//Create humidity feed - adafruit.io.
+AdafruitIO_Feed *temperature_feed = io.feed("iot_temperature");
 
 void setup(){
   Serial.begin(9600);
+
+  //Set pin modes.
   pinMode(LED_RED,OUTPUT);
-  pinMode(LED_YELLOW,OUTPUT);  
+  
+  //Start display.
   display_start();
-  state="W";
+  state="WIFI";
 }
 
 //Alarm condition.
@@ -68,12 +79,59 @@ void read_sensor_values(){
   Serial.println("Sensor HUMIDITY------->"+(String)humidity);  
 }
 
+//Connect wifi.
+int connect_wifi(){
+
+  if (connected==true)
+    return 0;
+
+  // wait for serial monitor to open
+  while(!Serial);
+
+  Serial.print("Connecting to Adafruit IO");
+
+  // connect to io.adafruit.com
+  io.connect();
+
+  // wait for a connection
+  while(io.status() < AIO_CONNECTED){
+    draw_wait();
+    led_on(LED_RED);
+    Serial.print("Wait...");
+    led_off(LED_RED);
+  }
+
+  connected=true;
+  
+  // we are connected
+  Serial.println();
+  Serial.println(io.statusText());
+  
+  return 1;
+   
+}
+
+//Send values to adafruit.
+void send_adafruit_values(){
+  draw_sending();
+  Serial.print("Sending values to adafruit, T:"+(String)temperature+" H:"+(String)humidity);
+  humidity_feed->save(humidity);
+  temperature_feed->save(temperature);
+}
+
 void loop(){
 
   //Welcome state.
   if (state=="W"){
     draw_welcome();
     delay(500);
+    state="WIFI";
+  }
+
+  //Connect wifi.
+  if (state=="WIFI"){
+    draw_connection();
+    connect_wifi();
     state="T";
   }
 
@@ -92,6 +150,12 @@ void loop(){
     draw_humidity_box(humidity);      
     led_standby(LED_RED);
     delay(250);    
+    state="S";
+  }
+
+  //Send adafruit values.
+  if (state=="S"){
+    send_adafruit_values();
     state="C";
   }
 

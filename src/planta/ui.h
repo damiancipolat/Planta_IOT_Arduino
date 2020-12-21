@@ -14,3 +14,6 @@ void draw_welcome();
 void draw_warning();
 void draw_text_box(String text);
 void draw_alarm(String text1,String text2);
+void draw_connection();
+void draw_wait();
+void draw_sending();
