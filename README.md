@@ -43,6 +43,6 @@ Lista de fotos, haga click en el link.
 - [En armado 5](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_5.jpg?raw=true)
 
 ### Maquina de estados:
-En el siguiente diagrama se detalla la maquina de estados creada para este proyecto.
+En el siguiente diagrama se detalla la maquina de estados creada para este proyecto..
 
 <img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/diagram.png?raw=true" width="1300px" align="center" />
