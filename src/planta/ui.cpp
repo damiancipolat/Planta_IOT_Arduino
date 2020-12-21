@@ -79,6 +79,7 @@ const unsigned char myBitmap [] PROGMEM = {
 //Start display
 void display_start()
 {
+  Wire.begin(2,0);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  
 }
 

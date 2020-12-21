@@ -3,7 +3,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
  
-const int oneWirePin = 4; 
+const int oneWirePin = 4;
 OneWire oneWireBus(oneWirePin);
 DallasTemperature sensor(&oneWireBus);
 

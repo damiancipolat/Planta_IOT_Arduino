@@ -3,14 +3,16 @@
 #include "ui.h"
 #include "led.h"
 
-int LED_1 =9;
+int LED_RED =5;
+int LED_YELLOW =16;
 String state;
 int temperature;
 int humidity;
 
 void setup(){
   Serial.begin(9600);
-  pinMode(LED_1,OUTPUT);  
+  pinMode(LED_RED,OUTPUT);
+  pinMode(LED_YELLOW,OUTPUT);  
   display_start();
   state="W";
 }
@@ -79,7 +81,7 @@ void loop(){
   if (state=="T"){
     read_sensor_values();
     draw_temperature_box(temperature);    
-    led_standby(LED_1);
+    led_standby(LED_RED);
     delay(250);
     state="H";
   }
@@ -88,7 +90,7 @@ void loop(){
   if (state=="H"){
     read_sensor_values();
     draw_humidity_box(humidity);      
-    led_standby(LED_1);
+    led_standby(LED_RED);
     delay(250);    
     state="C";
   }
@@ -113,8 +115,6 @@ void loop(){
   if (state=="EW"){
     //Show message.
     draw_alarm("Exceso","agua!");
-    delay(500);
-    draw_humidity_box(humidity);
     delay(1500);
     state="R";
   }
@@ -122,11 +122,9 @@ void loop(){
   //TEMPERATURE excess.
   if (state=="ET"){
     //Blink led.
-    led_alarm(LED_1);    
+    led_alarm(LED_RED);    
     //Show message.
     draw_alarm("Exceso","temp.!");
-    delay(500);
-    draw_temperature_box(temperature);
     delay(1500);
     state="R";
   }
@@ -135,8 +133,6 @@ void loop(){
   if (state=="WP"){
     //Show message.
     draw_alarm("Regar","planta");
-    delay(500);
-    draw_humidity_box(humidity);    
     delay(1500);
     state="R";    
   }
