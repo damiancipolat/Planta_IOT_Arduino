@@ -1,9 +1,6 @@
-/************************ Adafruit IO Config *******************************/
-
-// visit io.adafruit.com if you need to create an account,
 // or if you need your Adafruit IO key.
 #define IO_USERNAME "damcipolat"
-#define IO_KEY "aio_sJbQ66GtRp5aBFQH7tuQ2ea3pCjq"
+#define IO_KEY "aio_JWdk89okwSHadsLDyV0zupiUzfv6"
 
 /******************************* WIFI **************************************/
 
@@ -20,8 +17,8 @@
 //   - Adafruit AirLift Shield -> https://www.adafruit.com/product/4285
 //   - Adafruit AirLift FeatherWing -> https://www.adafruit.com/product/4264
 
-#define WIFI_SSID "Damian Moto G7+"
-#define WIFI_PASS "34382040dc"
+#define WIFI_SSID "Snoopy-wifi"
+#define WIFI_PASS "12343737"
 
 // uncomment the following line if you are using airlift
 // #define USE_AIRLIFT

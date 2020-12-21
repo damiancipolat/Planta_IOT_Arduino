@@ -4,8 +4,7 @@
 #include "ui.h"
 #include "led.h"
 
-int LED_RED =5;
-int LED_YELLOW =16;
+int LED_RED=16;
 String state;
 int temperature;
 int humidity;
@@ -25,7 +24,7 @@ void setup(){
   
   //Start display.
   display_start();
-  state="WIFI";
+  state="W";
 }
 
 //Alarm condition.
@@ -47,11 +46,11 @@ bool isTemperatureAlarm(){
 }
 
 bool isHumidityAlarm(){
-  return (humidity>0&&humidity<200);
+  return (humidity>=500&&humidity<=700);
 }
 
 bool waterRequired(){
-  return (humidity>800);
+  return (humidity>700);
 }
 
 //Alarm state.
@@ -97,8 +96,10 @@ int connect_wifi(){
   while(io.status() < AIO_CONNECTED){
     draw_wait();
     led_on(LED_RED);
-    Serial.print("Wait...");
+    delay(500);
+    Serial.println("Wait...");
     led_off(LED_RED);
+    delay(500);
   }
 
   connected=true;
@@ -156,6 +157,7 @@ void loop(){
   //Send adafruit values.
   if (state=="S"){
     send_adafruit_values();
+    delay(500);
     state="C";
   }
 

@@ -253,7 +253,7 @@ void draw_wait()
 
   //Temperatura
   font_size(2);
-  draw_text("conexion");
+  draw_text("Conexion");
   display.display(); 
 }
 
@@ -266,15 +266,15 @@ void draw_sending()
   draw_rectangle(0, 0,128 , 64, false);
 
   //Fuente y texto.
-  font_size(2);
+  font_size(3);
   display.setTextColor(WHITE);
   cursor(10,10);
 
   //Titulo
-  draw_text("Sending");
+  draw_text("SEND");
   cursor(35,35);  
-  draw_text("values...");
-  display.display();  
+  draw_text("DATA");  
+  display.display(); 
 }
 
 //Dibuja un aviso.
