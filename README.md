@@ -12,6 +12,8 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 - Exceso de agua.
 - Regar la planta.
 
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/muestra.jpeg?raw=true" width="500px" align="center" />
+
 ### Materiales utilizados:
 - Arduino UNO.
 - Sensor de humedad de tierra.
@@ -33,10 +35,6 @@ Este dispositivo nos ayuda a estar al tanto de las necesidads de la planta, nos 
 ### Proceso de armado:
 Lista de fotos, haga click en el link.
 
-#### Estado final:
-- [Estado final](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/final.jpeg?raw=true)
-
-#### En proceso de armado:
 - [En armado 1](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_1.jpg?raw=true)
 - [En armado 2](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_2.jpg?raw=true)
 - [En armado 3](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_3.jpg?raw=true)
