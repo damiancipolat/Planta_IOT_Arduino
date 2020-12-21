@@ -46,7 +46,15 @@ Lista de fotos, haga click en el link.
 - [En armado 4](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_4.jpg?raw=true)
 - [En armado 5](https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/armado_5.jpg?raw=true)
 
+En el siguiente link se puede descargar la presentación del proyecto:
+https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/Planta%20IOT.pptx
+
 ### Maquina de estados:
 En el siguiente diagrama se detalla la maquina de estados creada para este proyecto..
 
 <img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/diagram.png?raw=true" width="1300px" align="center" />
+
+### Arquitectura:
+Esta es la arquitectura creada para este proyecto, es una configuraión standard para proyectos IOT con arduino, en este caso creamos 2 feeds que son como queues MQ para envio de datos.
+
+<img src="https://github.com/damiancipolat/Planta_IOT_Arduino/blob/main/doc/arquitectura.png?raw=true" width="1500px" align="center" />
